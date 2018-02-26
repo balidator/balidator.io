@@ -1,0 +1,5 @@
+*.pyc
+.vscode/
+fabfile.py
+venv/
+balidator.wsgi

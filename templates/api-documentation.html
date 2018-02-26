@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block meta %}
+    <title>API Documentation for Balidator.io</title>
+    <meta name="description" content="API Documentation for Balidator.io">
+{% endblock %}
+
+{% block content %}
+<!-- HEADER -->
+<div class="container-fluid">
+
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <h1>Blockchain address validator API documentation</h1>
+            <p>Welcome to the documentation of 'Blockchain address validator'.</p>
+        </div>
+    </div>
+</div>
+<!-- END HEADER -->
+
+<hr>
+
+<!-- API DOCU -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <p>API Endpoint: <strong>https://balidator.io/api/</strong></p>
+            <p>Parameters: <strong>/api/&lt;coin&gt;/&lt;public_key&gt;</strong></p>
+            <p>JSON response: <section>{'blockchain': coin, 'valid_address': False}</section></p>
+        </div>
+    </div>
+</div>
+<!-- END API DOCU -->
+
+<hr>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            We currently support the public key validation for:
+            <ul>
+                <li>Bitcoin</li>
+                <li>Ethereum</li>
+                <li>Ripple</li>
+                <li>Monero</li>
+            </ul>
+            You can always contribute to this open-source project. Just click the Github link in the footer and you will find our public repository.
+        </div>
+    </div>
+</div>
+
+{% endblock %}

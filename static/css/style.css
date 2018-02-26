@@ -1,0 +1,40 @@
+h1 {
+    color: #777;
+}
+
+.grey-back {
+    background-color: #777;
+}
+
+.coin {
+    font-size: 22px;
+    text-align: center;
+}
+
+.hoverDiv {
+    background: #fff;
+}
+
+.hoverDiv:hover {
+    background: #d0d0d0;
+}
+
+.footer {
+    padding-top: 20px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 60px;
+    background-color: #d0d0d0;
+}
+
+#trueAlert {
+    visibility: hidden;
+    position: absolute;
+}
+
+#falseAlert {
+    position: absolute;
+    visibility: hidden;
+}

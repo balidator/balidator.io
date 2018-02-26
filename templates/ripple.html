@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% block meta %}
+    <title>Ripple address validator</title>
+    <meta name="description" content="Check if your Ripple address is valid with Balidator.io.">
+{% endblock %}
+
+{% block content %}
+
+<!-- HEADER -->
+<div class="container-fluid">
+
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <h1>Ripple address validator</h1>
+            <p>The 'Ripple address validator' is a tool to check the correctness of your Ripple wallet address. You can
+                use it, for example, before you receive a payment on your wallet or simply to verify that your paper wallet
+                has been created correctly.</p>
+        </div>
+    </div>
+</div>
+<!-- END HEADER -->
+
+<hr>
+
+<!-- FORM -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <form>
+                <div class="form-group">
+                    <label for="ripple">Ripple address:</label>
+                    <input type="text" class="form-control" id="ripple">
+                </div>
+                <button type="button" onclick="check_xrp()" class="btn btn-default">Validate</button>
+            </form>
+
+            <div id="trueAlert">
+                <hr>
+                <div class="alert alert-success" role="alert">
+                    <strong>Your Ripple address is valid:
+                        <span id="true_xrp_address"></span>
+                    </strong>
+                </div>
+            </div>
+
+            <div id="falseAlert">
+                <hr>
+                <div class="alert alert-danger" role="alert">
+                    <strong>Your Ripple address is unvalid:
+                        <span id="false_xrp_address"></span>
+                    </strong>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- END FORM -->
+
+{% endblock %}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    {% block meta %} {% endblock %}
+    <script src="{{url_for('static', filename='js/jquery-3.3.1.min.js')}}"></script>
+    <script src="{{url_for('static', filename='js/bootstrap.min.js')}}"></script>
+    <script src="{{url_for('static', filename='js/balidator.js')}}"></script>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+</head>
+
+<body>
+    <!-- NAV -->
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="{{url_for('index')}}" title="Blockchain address validator">Balidator.io</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="active">
+                    <a href="{{url_for('bitcoin')}}" title="Verify Bitcoin address">Bitcoin</a>
+                </li>
+                <li>
+                    <a href="{{url_for('ethereum')}}" title="Verify Ethereum address">Ethereum</a>
+                </li>
+                <li>
+                    <a href="{{url_for('ripple')}}" title="Verify Ripple address">Ripple</a>
+                </li>
+                <li>
+                    <a href="{{url_for('monero')}}" title="Verify Monero address">Monero</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- END NAV -->
+
+    {% block content %} {% endblock %}
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container-fluid">
+            <p class="text-center">Copyright &copy; Balidator.io
+                <script type="text/javascript">
+                    var d = new Date()
+                    document.write(d.getFullYear())
+                </script> |
+                <a href="{{url_for('api_documentation')}}">API</a> |
+                <a href="mailto:balidator@protonmail.com">Contact</a> |
+                <a href="http://github.com/">Github</a>
+            </p>
+        </div>
+    </footer>
+    <!-- END FOOTER -->
+</body>
+
+</html>

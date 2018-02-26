@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block meta %}
+	<title>Blockchain address validator</title>
+	<meta name="description" content="Balidator.io is an open-source blockchain address validator for bitcoin, ethereum, ripple, monero and many more. API included.">
+{% endblock %}
+
+{% block content %}
+	<!-- HEADER -->
+	<div class="container-fluid">
+
+		<div class="row">
+			<div class="col-md-6 col-md-offset-3">
+				<h1>Blockchain address validator</h1>
+				<p>Balidator.io is an open-source blockchain address validator. It can verify wallet addresses for bitcoin, ethereum, ripple
+					and monero.</p>
+			</div>
+		</div>
+	</div>
+	<!-- END HEADER -->
+	
+	<hr>
+
+	<!-- WALLET CHOOSE -->
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-3 hoverDiv">
+				<div class="coin"><a href="{{url_for('bitcoin')}}" title="Verify your Bitcoin address">Bitcoin</a></div>
+			</div>
+			<div class="col-md-3 hoverDiv">
+				<div class="coin">
+					<a href="{{url_for('ethereum')}}" title="Verify your Ethereum address">Ethereum</a>
+				</div>
+			</div>
+			<div class="col-md-3 hoverDiv">
+				<div class="coin">
+					<a href="{{url_for('ripple')}}" title="Verify your Ripple address">Ripple</a>
+				</div>
+			</div>
+			<div class="col-md-3 hoverDiv">
+				<div class="coin">
+					<a href="{{url_for('monero')}}" title="Verify your Monero address">Monero</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- END WALLET CHOOSE -->
+
+	<hr>
+{% endblock %}
