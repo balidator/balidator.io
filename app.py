@@ -45,6 +45,9 @@ def api_documentation():
 @app.route('/api/<coin>/<address>', methods=['GET'])
 def api(coin, address):
 	if coin == 'bitcoin':
+		if not address:
+			return "Please enter an address"
+
 		valid = validate_btc(address)
 
 		if valid:
@@ -53,6 +56,8 @@ def api(coin, address):
 			return jsonify({'blockchain': coin, 'valid_address': False})
 
 	if coin == 'ethereum':
+		if not address:
+			return "Please enter an address"
 		try:
 			check_checksum(address)
 			valid = True
@@ -62,6 +67,9 @@ def api(coin, address):
 		return jsonify({'blockchain': coin, 'valid_address': valid})
 
 	if coin == 'ripple':
+		if not address:
+			return "Please enter an address"
+
 		valid = validate_ripple_address(address)
 
 		if valid:
@@ -72,6 +80,9 @@ def api(coin, address):
 		return 'ripple'
 
 	if coin == 'monero':
+		if not address:
+			return "Please enter an address"
+			
 		valid = validate_monero_address(address)
 
 		if valid:
